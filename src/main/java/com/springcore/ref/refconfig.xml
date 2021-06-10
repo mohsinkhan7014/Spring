@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">   
+    
+    <bean name="examResultRef" class="com.springcore.ref.ExamResult">
+    <property name="p" value="96"/>
+      <property name="c" value="97"/>
+        <property name="m" value="100"/>
+    </bean>    
+    
+   <!--  using p tag  -->
+   <bean name="detailsRef" class="com.springcore.ref.Details" p:rollno="123" p:name="Mohsin" p:er-ref="examResultRef"/>
+    
+<!--     this is second method to implement
+    <bean name="detailsRef"  class="com.springcore.ref.Details">
+    <property name="rollno" value="11717842"/>
+        <property name="name" value="Mohsin"/>
+            <property name="er" ref="examResultRef"/>
+        
+    </bean> -->
+    
+<!--     <bean name="detailsRef" class="com.springcore.ref.Details">
+    <property name="rollno" value="112"/>
+        <property name="name" value="Mohsin"/>
+            <property name="er" >
+            <ref bean="examResultRef"/>
+            </property>
+        
+    
+    </bean> -->
+
+</beans>

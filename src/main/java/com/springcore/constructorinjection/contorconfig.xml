@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+		xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">   
+<!--       <bean name="person" class="com.springcore.constructorinjection.Person">
+      <constructor-arg name="name"><value>Ankit</value>
+      </constructor-arg>
+      <constructor-arg name="id" value="121"/>
+     
+      
+      
+      <constructor-arg value="Mohsin"/>
+            <constructor-arg value="123"/>
+            <constructor-arg ref="certificate"/>
+      </bean>
+       -->
+      
+     <!--  <bean name="certificate" class="com.springcore.constructorinjection.Certificate">
+      <constructor-arg value="Android With Java"/>
+      </bean> -->
+      
+   <!--    this is wrng way
+     <bean name="contactlist" class="com.springcore.constructorinjection.Person">
+    <constructor-arg><list>
+    <value>7014351132</value>
+        <value>83840154</value>
+            <value>70635652</value>
+    </list></constructor-arg></bean> -->
+    
+    
+      <bean name="certificate" class="com.springcore.constructorinjection.Certificate" c:cName="Android is Good Language for Mobile Development"/>
+      <bean name="person" class="com.springcore.constructorinjection.Person" c:name="Mohsin" c:id="123"  c:certificate-ref="certificate" c:phones="9090909,121212,121212"/>
+   <!--    <constructor-arg><list>
+      <value>7014351132</value>
+       <value>7011212122</value>
+        <value>70143212</value>
+         <value>7232345678</value></list></constructor-arg> -->
+     <!--  </bean> -->
+     
+     
+     
+     
+     
+     
+     <bean name="addition" class="com.springcore.constructorinjection.Addition">
+     <constructor-arg value="12" index="1" />
+     <constructor-arg value="89" type="double"/>
+     </bean>
+        
+
+</beans>

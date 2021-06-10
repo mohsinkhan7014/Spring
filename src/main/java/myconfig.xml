@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">   
+        <bean class="com.springcore1.core1.Employ" name="emp" >
+        <property name="name"><value>Mohsin Khan</value></property>
+        
+        <property name="address">
+       <value>Ajam Market Station Road Marana</value>
+        </property>
+        
+        </bean>
+        
+        <bean class="com.springcore1.core1.Employ" name="emp1" >
+        <property name="name" value="Bhawna"/>
+        <property name="address" value="Delhi"/>
+        </bean>
+        
+       
+        <bean class="com.springcore1.core1.Employ" name="emp3" p:name="Ankit" p:address="Utterpardesh"/>
+        
+
+</beans>
